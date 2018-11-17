@@ -25,10 +25,6 @@ app.use(bodyParser.json());
 
 app.post('/payload', function(req, res) {
 
-    console.log("*******************************")
-    console.log("req comment is ", req.body.comment)
-    console.log("*******************************")
-
     let payload_body = req.body
     verify_signature(payload_body, req, res)
 });
