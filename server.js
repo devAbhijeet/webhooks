@@ -26,10 +26,10 @@ app.use(bodyParser.json());
 app.post('/payload', function(req, res) {
 
     let payload_body = req.body
-    console.log("payload_body is ", payload_body);
+    console.log("payload_body is ", payload_body.commits);
     verify_signature(payload_body, req, res)
 });
 
 app.listen(port, function(){
-    console.log(`Example appss listening on port ${port}!`)
+    console.log(`Example appsss listening on port ${port}!`)
 });
