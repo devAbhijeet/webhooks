@@ -26,6 +26,7 @@ app.use(bodyParser.json());
 app.post('/payload', function(req, res) {
 
     let payload_body = req.body
+    console.log("payload_body is ", payload_body);
     verify_signature(payload_body, req, res)
 });
 
